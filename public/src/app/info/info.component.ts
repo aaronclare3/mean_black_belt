@@ -30,7 +30,7 @@ export class InfoComponent implements OnInit {
     let observable = this._httpService.getOne(this.id);
     observable.subscribe(data => {
       this.pet = data;
-      this.pet_skills = data.skills;
+      this.pet_skills = data['skills'];
     });
   }
   delete() {
